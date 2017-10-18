@@ -4,22 +4,18 @@ import numpy as np
 from datetime import datetime
 import Scrape_RedditMetrics as scrape
 import Download_prices as price
+import Constants as cons
 
 #recall Downloads
-currencies = ("litecoin","bitcoin","ethereum","nem","dashpay","monero","neo")
-
-scrape.Scrape_redditMetrics(currencies);
-price.download_price();
+scrape.Scrape_redditMetrics(cons.currencies);
+price.download_price(cons.currencies);
 
 ## For declaration
-for currency in currencies :
-    currencyName = currency
-    
+for currency in cons.currencies :
     ## Constants
-    
-    #Update this with your local local directory
-    reddit_file = "/home/fmerizzi/Desktop/scrapingBuffer/" + currencyName + "_redditGrowth.csv"
-    price_file =  "/home/fmerizzi/Desktop/scrapingBuffer/" + currencyName + "price.csv"
+
+    reddit_file = cons.directory + currency + "_redditGrowth.csv"
+    price_file =  cons.directory + currency + "price.csv"
 
     ## Plotting first Figure
     plt.figure(1,figsize=(20,10))
@@ -31,7 +27,7 @@ for currency in currencies :
     for i in range(len(x)):
         x[i] = datetime.strptime(y[i], "b'%Y-%m-%d'")
     dates = matplotlib.dates.date2num(x)
-    matplotlib.pyplot.plot_date(dates, z, ls='solid', marker=",",label=currencyName + " reddit growth")
+    matplotlib.pyplot.plot_date(dates, z, ls='solid', marker=",",label=currency + " reddit growth")
     matplotlib.pyplot.legend()
 
     ## Plotting Second Figure
@@ -45,7 +41,7 @@ for currency in currencies :
     dates3 = matplotlib.dates.date2num(n)
     plt.subplot(212, sharex = ax1)
     dates3 = matplotlib.dates.date2num(n)
-    matplotlib.pyplot.plot_date(dates3, q, ls = 'solid',marker = ",", color = "red",label=currencyName + " price")
+    matplotlib.pyplot.plot_date(dates3, q, ls = 'solid',marker = ",", color = "red",label=currency + " price")
     matplotlib.pyplot.legend()
     matplotlib.pyplot.tight_layout(pad=0.4, w_pad=0.5, h_pad=1.0)
     matplotlib.pyplot.show()
