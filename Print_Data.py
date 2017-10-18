@@ -8,13 +8,16 @@ import Download_prices as price
 #recall Downloads
 currencies = ("litecoin","bitcoin","ethereum","nem","dashpay","monero","neo")
 
-#scrape.Scrape_redditMetrics(currencies);
-#price.download_price();
+scrape.Scrape_redditMetrics(currencies);
+price.download_price();
 
 ## For declaration
 for currency in currencies :
     currencyName = currency
+    
     ## Constants
+    
+    #Update this with your local local directory
     reddit_file = "/home/fmerizzi/Desktop/scrapingBuffer/" + currencyName + "_redditGrowth.csv"
     price_file =  "/home/fmerizzi/Desktop/scrapingBuffer/" + currencyName + "price.csv"
 
