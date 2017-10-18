@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import matplotlib
 import numpy as np
 from datetime import datetime
-import Scraping_1 as scrape
+import Scrape_RedditMetrics as scrape
 import Download_prices as price
 
 #recall Downloads
