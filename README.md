@@ -9,6 +9,7 @@ It is necessary to update the directories for storing the data, for the program 
 For downloading other currencies you just have to add the name in the list of strings.
 
 The Folder Data_Files contains examples of the downloaded csv
+
 The Folder Print_Examples_jpg contains examples of the printed graphs, in jpg format 
 
 
