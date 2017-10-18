@@ -11,3 +11,5 @@ For downloading other currencies you just have to add the name in the list of st
 The Folder Data_Files contains examples of the downloaded csv
 
 The Folder Print_Examples_jpg contains examples of the printed graphs, in jpg format 
+
+The code is developed in python 3.6.2
