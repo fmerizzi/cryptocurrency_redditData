@@ -1,8 +1,8 @@
 # cryptocurrency_redditData
 This Code is meant for automating the download of Crypto's subreddit growth data and Price, and also print a friendly comparison graph with matplotlib.
 
-The data from reddit is retrieved with the request library from the https://www.redditmetrics.com, downloaded and stored in a csv. 
-The price csv is directly downloaded from https://www.coingecko.com/ for the desired cryptocurrencies 
+The data from reddit is retrieved with the request library from https://www.redditmetrics.com, downloaded and stored in a csv. 
+The price csv is directly downloaded from https://www.coingecko.com/ for the desired currency
 
 It is necessary to update the directories for storing the data, for the program to run on other systems.
 
