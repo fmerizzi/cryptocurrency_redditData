@@ -12,4 +12,5 @@ The Folder Data_Files contains examples of the downloaded csv
 
 The Folder Print_Examples_jpg contains examples of the printed graphs, in jpg format 
 
+Post on Reddit https://www.reddit.com/r/datascience/comments/7795wx/i_compared_bitcoin_price_data_with_reddit/
 The code is developed in python 3.6.2
