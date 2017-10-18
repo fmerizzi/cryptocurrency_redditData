@@ -3,6 +3,8 @@
 
 
 import requests
+
+#Addresses of the csv on coingecko, must match with the string below
 addresses = "https://www.coingecko.com/price_charts/export/bitcoin/usd.csv?locale=en",\
             "https://www.coingecko.com/price_charts/export/monero/usd.csv?locale=en",\
             "https://www.coingecko.com/price_charts/export/litecoin/usd.csv?locale=en",\
@@ -18,7 +20,9 @@ def download_price():
     for address in addresses:
         print("downloading price of " + names[i])
         url = address
+        #Update with your local directory    
         fileName = "/home/fmerizzi/Desktop/scrapingBuffer/"+ names[i] + "price" ".csv"
+
         req = requests.get(url)
         file = open(fileName, 'wb')
         for chunk in req.iter_content(100000):
